@@ -1,0 +1,116 @@
+html, body {
+	height:100%;
+	width:100%;
+}
+
+body {
+   font: 24px Helvetica;
+   background-image: url("https://orig00.deviantart.net/5dd5/f/2009/092/7/e/interlude_by_beesknees67.jpg");
+  /* image attribution: Beesknees67 https://www.deviantart.com/art/Interlude-117757668 */
+  
+  }
+
+  
+  #main {
+   min-height: 70%;
+   max-height: 70%;
+   margin: 0px;
+   padding: 0px;
+   display:  flex;
+   flex-flow: row;
+   }
+ 
+  #main > article {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 3%;
+   background: #dddd88;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   }
+  
+  #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 3%;
+   text-align: center;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 1;
+   }
+  
+  #main > aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 3%;
+   text-align: center;
+   background-image: url("https://orig00.deviantart.net/447c/f/2009/173/b/9/the_forgotten_future_by_beesknees67.jpg");
+   background-size: contain;
+   /*image attribution: https://www.deviantart.com/art/The-Forgotten-Future-126869425 */
+           flex: 1 6 15%;
+           order: 3;
+
+   }
+
+   .story{
+    font-size: 10px;
+   }
+
+   .navi {
+    margin: auto;
+    text-align: left;
+   }
+
+   .ref {
+    padding: 0;
+    
+
+   }
+ 
+  header, footer {
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 10%;
+   border: 1px solid #eebb55;
+   border-radius: 3%;
+   background: #ffeebb;
+   }
+
+   footer {
+    background-image: 
+    linear-gradient(to right, orange, yellow, green);
+
+   }
+
+   ul {
+    list-style:none;
+
+  }​
+
+
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    flex-flow: column;
+    flex-direction: column;
+   }
+
+   #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  
+
+
